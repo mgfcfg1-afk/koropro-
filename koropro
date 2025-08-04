@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>KORO World</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      direction: rtl;
+    }
+
+    header {
+      background-color: #333;
+      padding: 30px 0;
+      font-size: 32px;
+      font-weight: bold;
+      color: #00ffd5;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    nav {
+      margin-top: 40px;
+    }
+
+    .menu {
+      display: inline-block;
+      text-align: right;
+      position: relative;
+    }
+
+    .menu button {
+      background-color: #00b894;
+      color: white;
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .menu button:hover {
+      background-color: #019875;
+    }
+
+    .dropdown {
+      display: none;
+      background-color: white;
+      color: black;
+      border-radius: 6px;
+      margin-top: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      padding: 0;
+      min-width: 180px;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 12px 16px;
+      text-decoration: none;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+      transition: background 0.3s;
+    }
+
+    .dropdown a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown a:hover {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <header>مرحباً بك في KORO World</header>
+
+  <nav>
+    <div class="menu">
+      <button onclick="toggleDropdown()">🎮 ألعاب</button>
+      <div id="dropdownMenu" class="dropdown">
+        <a href="#">ماين كرافت</a>
+        <a href="#">بوبجي</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    function toggleDropdown() {
+      const menu = document.getElementById("dropdownMenu");
+      if (menu.style.display === "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
